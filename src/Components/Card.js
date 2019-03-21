@@ -18,8 +18,11 @@ class Card extends React.Component {
           <div class="card-body">
           <h5 class="card-title">{this.props.data.question}</h5>
             <div style={{display:'flex', justifyContent:'center'}}>
-            <button className="btn btn-primary" onClick={this.modalToggle}>Answer</button>
+            <button className="btn btn-outline-primary" style={{borderRadius:"30px"}}  onClick={this.modalToggle}>Answer</button>
             </div>
+          </div>
+          <div className="card-footer text-muted text-center">
+              Difficulty: {this.props.data.difficulty}
           </div>
         </div>
       </div>

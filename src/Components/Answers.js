@@ -60,15 +60,21 @@ class Answers extends React.Component {
             </button>
           </div>
         ) : null}
-        <div style={{display:'flex', justifyContent:'center', marginTop:"10px"}}>
-        {this.props.generated ? (
-          <div>
-            <p>Attempted Questions:{this.props.attempted}</p>
-            <p>Right Answers:{this.props.correct}</p>
-            <p>Wrong Answers:{this.props.wrong}</p>
-            <h4>Score:{this.props.correct * 250 - this.props.wrong * 50}</h4>
-          </div>
-        ) : null}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "10px"
+          }}
+        >
+          {this.props.generated ? (
+            <div>
+              <p>Attempted Questions:{this.props.attempted}</p>
+              <p>Right Answers:{this.props.correct}</p>
+              <p>Wrong Answers:{this.props.wrong}</p>
+              <h4>Score:{this.props.correct * 250 - this.props.wrong * 50}</h4>
+            </div>
+          ) : null}
         </div>
       </div>
     );

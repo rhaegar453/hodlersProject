@@ -1,0 +1,6 @@
+export const MODAL_OPEN="MODAL_OPEN";
+export const ANSWERED="ANSWERED";
+
+export const SUBMIT_TRIVIA="SUBMIT_TRIVIA";
+
+export const GENERATE_REPORT="GENERATE_REPORT";
