@@ -7,7 +7,7 @@ class Navigation extends React.Component {
   }
   render() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
         <a class="navbar-brand" style={{ fontSize: "20px"}} onClick={()=>this.props.history.push('/')}>
           <b>
           <i class="fab fa-bitcoin" style={{marginRight:"10px", fontSize:"40px"}}></i>HodlersTr<i class="fas fa-question" />via
