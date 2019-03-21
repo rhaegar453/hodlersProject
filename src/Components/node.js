@@ -1,26 +1,27 @@
 let obj=[
     {
         id:1,
-        value:false,
-        mess:'Hello'
+        right:'one',
+        myAns:'two'
     },
     {
         id:2,
-        value:true,
-        mess:'shiv'
+        right:'one',
+        myAns:'three'
     },
     {
         id:3,
-        value:true,
-        mess:'Sachin'
+        right:'one',
+        myAns:'one'
     },
     {
         id:4,
-        value:false,
-        mess:'Sheela'
+        right:'one',
+        myAns:'one'
     }
 ]
 
 
-let m=obj.filter(data=>data.value);
+
+
 console.log(m);

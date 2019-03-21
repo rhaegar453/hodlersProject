@@ -1,13 +1,37 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
+class ListItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isRight: false
+    };
+  }
 
-const ListItem=(props)=>{
-    return(
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-        {props.data.question}
-        <span class="badge badge-danger badge-pill">{props.data.myAnswer}</span>
+  render() {
+    return (
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        {this.props.data.question}
+        <span class="badge badge-danger badge-pill">
+          {this.props.data.myAnswer}
+        </span>
+        {this.props.submitted ? (
+          <div>
+        <span class="badge badge-success badge-pill">
+          {this.props.data.correct_answer}
+        </span>
+          </div>
+        ) : null}
       </li>
     );
+  }
 }
 
-export default ListItem
+const mapStateToProps = state => {
+  return {
+    submitted: state.trivia.submitted
+  };
+};
+
+export default connect(mapStateToProps)(ListItem);
