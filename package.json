@@ -2,10 +2,19 @@
   "name": "hodlerstrivia",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.x",
+    "node":"8.x"
+  },
   "dependencies": {
+    "npm": "^6.9.0",
     "react": "^16.8.4",
+    "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
