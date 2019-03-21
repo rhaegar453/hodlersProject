@@ -1,13 +1,14 @@
 import React, { Component } from "react";
+import {Link, withRouter} from 'react-router-dom';
 
-export default class Navigation extends React.Component {
+class Navigation extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
       <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
-        <a class="navbar-brand" href="#" style={{ fontSize: "20px" }}>
+        <a class="navbar-brand" style={{ fontSize: "20px"}} onClick={()=>this.props.history.push('/')}>
           <b>
           <i class="fab fa-bitcoin" style={{marginRight:"10px", fontSize:"40px"}}></i>HodlersTr<i class="fas fa-question" />via
           </b>
@@ -26,7 +27,7 @@ export default class Navigation extends React.Component {
         <div class="collapse navbar-collapse mt-3 ml-2" id="navbarNav">
           <ul class="navbar-nav">
           <li class="nav-item">
-        <a class="nav-link" href="#"><b>Answered</b></a>
+        <a class="nav-link" onClick={()=>this.props.history.push('/answers')}><b>Answered</b></a>
       </li>
           </ul>
         </div>
@@ -34,3 +35,5 @@ export default class Navigation extends React.Component {
     );
   }
 }
+
+export default withRouter(Navigation);
