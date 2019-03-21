@@ -14,6 +14,9 @@ class Content extends React.Component {
       <div className="container">
         <Modal />
         <div className="row">
+        <div style={{marginTop:'20px'}}>
+            {this.props.questions.length==0?<p>You've attempted all the questions</p>:null}
+        </div>
           {this.props.questions.map((data, index) => (
             <Card data={data} index={index} />
           ))}
